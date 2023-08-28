@@ -1,0 +1,44 @@
+.item1 { grid-area: biruT; }
+.item2 { grid-area: kuning; }
+.item3 { grid-area: merah; }
+.item4 { grid-area: hijau; }
+.item5 { grid-area: hitam; }
+.item6 { grid-area: coklat; }
+.item7 { grid-area: ungu; }
+.item8 { grid-area: oren; }
+.item9 { grid-area: putih; }
+.item10 { grid-area: p1nk; }
+.item11 { grid-area: biru; }
+.item12 { grid-area: abu; }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+      'biruT biruT hitam hitam hitam hitam'
+      'biruT biruT coklat coklat putih p1nk'
+      'biruT biruT coklat coklat putih biru'
+      'kuning kuning ungu ungu putih biru'
+      'merah merah ungu ungu abu abu'
+      'hijau hijau oren oren abu abu';
+    padding: 1px;
+    grid-auto-rows: minmax(114px,auto);
+
+  }
+
+.grid-container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    padding: 20px 0;
+    font-size: 30px;
+    
+  }
+
+.fontStyle {
+    font-family: arial;
+}
+
+.colorFont {
+    color: white;
+}
