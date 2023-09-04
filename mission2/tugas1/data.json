@@ -1,0 +1,32 @@
+[
+    {
+        "img": "assets/denim-jacket.png",
+        "title": "Denim Jacket",
+        "price": "350000"
+    },
+    {
+        "img": "assets/denim-pants.png",
+        "title": "Denim Pants",
+        "price": "250000"
+    },
+    {
+        "img": "assets/cap.png",
+        "title": "Cap",
+        "price": "200000"
+    },
+    {
+        "img": "assets/socks.png",
+        "title": "Socks",
+        "price": "150000"
+    },
+    {
+        "img": "assets/hawaiian-shirt.png",
+        "title": "Hawaiian Shirt",
+        "price": "300000"
+    },
+    {
+        "img": "assets/sneaker.png",
+        "title": "Sneaker",
+        "price": "400000"
+    }
+]
