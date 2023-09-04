@@ -136,55 +136,8 @@ function displayCart() {
             <div>Total Pembelian: ${formatRupiah(totalPriceBeforeTax)}</div>
             <div>Pajak 11%: ${formatRupiah(totalTax)}</div>
             <div>Total Bayar: ${formatRupiah(totalPriceAfterTax)}</div> 
-            <button class="btn btn-primary btn-print-receipt mt-1 mb-1">Cetak Struk Pembayaran</button>
         </div>
         
     `;
 
-    const printReceiptButton = document.querySelector('.btn-print-receipt');
-    printReceiptButton.addEventListener('click', () => {
-        // Panggil fungsi untuk mencetak struk pembayaran di sini
-        printReceipt(totalPriceBeforeTax, totalTax, totalPriceAfterTax);
-    }); 
-
-}
-
-function printReceipt(totalPriceBeforeTax, totalTax, totalPriceAfterTax) {
-    // Dapatkan elemen 'cart-cont' untuk mendapatkan daftar barang yang akan dicetak
-    const cartCont = document.querySelector('.cart-cont');
-
-    // Membuat struk pembayaran (Anda dapat menyesuaikannya sesuai dengan format yang Anda inginkan)
-    const receiptText = `
-        ============ ICashier ============
-        ======== Struk Pembayaran ========
-        Tanggal: ${new Date().toLocaleDateString()}
-        
-        Daftar Barang:
-        ${getCartItemsList()} 
-
-        Total Pembelian: ${formatRupiah(totalPriceBeforeTax)}
-        Pajak 11%: ${formatRupiah(totalTax)}
-        Total Bayar: ${formatRupiah(totalPriceAfterTax)}
-        
-        Terima kasih atas pembelian Anda!
-    `;
-
-    // Cetak struk pembayaran ke jendela baru
-    const receiptWindow = window.open('', '_blank');
-    receiptWindow.document.open();
-    receiptWindow.document.write(`<pre>${receiptText}</pre>`);
-    receiptWindow.document.close();
-}
-
-// Fungsi untuk mendapatkan daftar barang yang akan dicetak di struk
-function getCartItemsList() {
-    let itemsList = '';
-    cartItems.forEach((item) => {
-        itemsList += `- ${item.title} x${item.quantity}\n`;
-    });
-
-    // Menggunakan tab (\t) untuk menata rata daftar barang
-    itemsList = itemsList.replace(/\n/g, '\n\t');
-
-    return itemsList;
 }
